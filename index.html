@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一封来自女朋友的信</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+    }
+    body {
+        background: #fdf2f8;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        color: #333;
+    }
+    /* 问题页样式 */
+    .question-container {
+        background: #fff;
+        padding: 40px 30px;
+        border-radius: 20px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 500px;
+        text-align: center;
+    }
+    .question-container h2 {
+        color: #d63384;
+        margin-bottom: 30px;
+        font-size: 22px;
+        line-height: 1.5;
+    }
+    .answer-input {
+        width: 100%;
+        padding: 15px;
+        border: 2px solid #f0c0d8;
+        border-radius: 10px;
+        font-size: 18px;
+        margin-bottom: 20px;
+        outline: none;
+        text-align: center;
+    }
+    .answer-input:focus {
+        border-color: #d63384;
+    }
+    .submit-btn {
+        background: #d63384;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        width: 100%;
+        transition: background 0.3s;
+    }
+    .submit-btn:hover {
+        background: #b5246e;
+    }
+    .error-tip {
+        color: #e74c3c;
+        margin-top: 15px;
+        font-size: 16px;
+        display: none;
+    }
+    /* 信件样式 */
+    .letter {
+        background: #fff;
+        width: 100%;
+        max-width: 600px;
+        padding: 30px 20px;
+        border-radius: 20px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        line-height: 1.8;
+        font-size: 16px;
+        display: none;
+        position: relative;
+    }
+    .letter h1 {
+        font-size: 24px;
+        margin-bottom: 25px;
+        color: #d63384;
+        text-align: center;
+    }
+    .letter p {
+        margin-bottom: 18px;
+        text-indent: 2em;
+    }
+    .heart {
+        color: #d63384;
+        font-size: 20px;
+    }
+    .signature {
+        text-align: right;
+        margin-top: 40px;
+        font-size: 18px;
+    }
+    /* 音乐按钮 */
+    .music-btn {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #d63384;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 30px;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    /* 适配小屏手机 */
+    @media (max-width: 375px) {
+        .letter {
+            padding: 25px 15px;
+            font-size: 15px;
+        }
+        .question-container {
+            padding: 30px 20px;
+        }
+    }
+</style>
+</head>
+<body>
+    <!-- 问题页 -->
+    <div class="question-container" id="questionPage">
+        <h2>请先回答问题：<br>今天是我们在一起的第几天？</h2>
+        <input type="text" class="answer-input" id="answer" placeholder="输入数字即可">
+        <button class="submit-btn" onclick="checkAnswer()">解锁表白信</button>
+        <div class="error-tip" id="errorTip">不对哦～再想想？</div>
+    </div>
+
+    <!-- 表白信页面 -->
+    <div class="letter" id="letterPage">
+        <h1>To 小阮同学：</h1>
+
+        <p>以前总说你不懂浪漫，但是周五晚上的惊喜真的惊到我了😭😭😭真的很感动，虽然我当时没有什么表现，因为真的很懵，没想到你会搞这出🥺</p >
+
+        <p>其实我很期待你来找我，毕竟真的已经很久很久没见了，国庆也只见了一面。在你说你要来找我的时候我就想好了去高铁站接你，想着故意跟你说我在寝室，然后悄悄出现在你面前，我想你应该也会很惊喜吧，但是没想到你居然“骗”了我！一开始我也有想过，你会不会提早来突然出现在我面前，但是一想到你刚考完试，也很累，也需要时间休息一下，就打消了这个念头，但是你真的提早来了。我原本想得非常好，九点多从门口出发，在你下车前10分钟左右到车站，但是没想到我居然晕车了（可能是因为看书看晕了），我就紧急调整状态，想着不能表现得很累。但是，后面发现你居然已经去酒店了，我一开始很无语，也有一点生气，没想到会这样，而且也完全没想到你会准备惊喜，想过的最好的就是你会买一束花等我。我就带着我的怨气来到酒店。一出电梯就看到你在等我，我还是不得劲，你让我开门，我还赌气不想开门，根本没想到你会布置这些东西！一打开门我真的怔住了，没想到这种出现在手机里的场面也会被我经历到。你说你布置得很匆忙，很多还没来得及布置，但是我觉得已经非常好了！真的很好看！当你把花给我的时候，我还是很懵，但是那时候有点想哭（你那时候说了一句我之前让你再表白一次，这不就来了嘛），我想那时候如果你说得再多一点的话我会真的哭。你后面还问我为什么我没有表现出很开心的样子，那是因为我真的还没反应过来，也不知道该说什么，我在紧张的时候只会想打你（邦邦给你两拳哈哈哈哈哈哈哈哈）。</p >
+
+        <p>我现在觉得那句话很对，没有教不会的男生，只有不够爱的男生！你的改变真的也非常大！其实我一直觉得我是一个挺物质的女生，会去做一些比较，也会让你给我的多一点，在看到你这些之后，对于这一点我内心还是蛮内疚的。就像你说的那样，我还是希望以后都是你，不仅仅是现在。</p >
+
+        <p>我一直说我是一个喜欢惊喜的人，但是细数以前，我好像也没给过你什么惊喜，但是我想说的是我们还有很多以后，尽情期待一下吧！最后，那天晚上你没说出口的话，换我来说：小阮同学，你愿意再一次做我的男朋友嘛！（超大声的，虽然我在图书馆哈哈哈哈哈哈哈）你愿意再继续包容我的一切缺点以及坏脾气，跟我继续过好多个881天嘛！（不愿意也不行，强制爱了）未来彼此一起努力，成为更好的自己，我爱你呀，我的小阮同学！（以后说不定就成为小阮先生了嘿嘿）</p >
+
+        <div class="signature">
+            <span class="heart">❤️</span> 爱你的人
+        </div>
+
+        <!-- 背景音乐 -->
+        <audio id="music" loop>
+            <source src="https://music.163.com/song/media/outer/url?id=186720.mp3" type="audio/mpeg">
+        
+
+        <!-- 播放按钮 -->
+        <button class="music-btn" onclick="playMusic()">点击播放背景音乐：最好的我</button>
+    </div>
+
+<script>
+    // 正确答案
+    const correctAnswer = "881";
+
+    function checkAnswer() {
+        const inputAnswer = document.getElementById("answer").value;
+        const errorTip = document.getElementById("errorTip");
+        const questionPage = document.getElementById("questionPage");
+        const letterPage = document.getElementById("letterPage");
+
+        if (inputAnswer === correctAnswer) {
+            questionPage.style.display = "none";
+            letterPage.style.display = "block";
+        } else {
+            errorTip.style.display = "block";
+            setTimeout(() => {
+                errorTip.style.display = "none";
+            }, 3000);
+        }
+    }
+
+    function playMusic() {
+        const music = document.getElementById("music");
+        music.play();
+        document.querySelector(".music-btn").style.display = "none";
+    }
+
+    document.getElementById("answer").addEventListener("keydown", function(e) {
+        if (e.key === "Enter") {
+            checkAnswer();
+        }
+    });
+</script>
+</body>
+</html>
